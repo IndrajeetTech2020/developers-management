@@ -1,0 +1,36 @@
+.navbar {
+    justify-content: space-between;
+}
+
+span {
+    padding-right: 1rem;
+}
+
+mat-card{
+    padding-bottom: 1px;
+}
+.form-and-preview {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.form {
+    flex-basis: 70%;
+}
+
+.preview {
+    flex-basis: 30%;
+}
+
+label {
+    padding: 1rem;
+}
+.ScrollStyle
+{
+    max-height: 500px;
+    overflow-y: scroll;
+}
+button{
+    width: 50px;
+}

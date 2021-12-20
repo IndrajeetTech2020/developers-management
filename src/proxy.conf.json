@@ -1,0 +1,13 @@
+{
+    "/api": {
+      "target": "http://182.58.137.63",
+      "secure": false
+    },
+    "/oauth": {
+      "target": "http://182.58.137.63",
+      "secure": false
+    }
+  }
+
+
+  

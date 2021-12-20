@@ -1,0 +1,56 @@
+
+<nav>
+<h2> Search Profile</h2>
+<div fxFlex fxLayout="row" fxLayoutAlign="flex-end">
+    <ul fxLayout="row" fxLayoutGap="15px">
+        
+        <li>
+            <mat-form-field appearance="" style="padding-right: 20px;">
+                <mat-label>Enter Github Profile</mat-label>
+                <input matInput id="idPrfName" #idPrfName>
+              </mat-form-field>
+            <button mat-raised-button id="btnNew" color="primary" (click)="searchProfile(idPrfName.value)">SEARCH</button>
+        </li>
+    </ul>
+</div>
+</nav>
+<div class="" >
+    <mat-card>
+        <mat-card-title-group>
+            <mat-card-title>{{ result.name }}</mat-card-title>
+            <mat-card-subtitle>{{ result.blog }}</mat-card-subtitle>
+            <img mat-card-sm-image src="{{ result.avatar_url }}" >
+        </mat-card-title-group>
+        <mat-divider></mat-divider>
+        <mat-card-content>
+        <table class="table">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col">Repo No.</th>
+                    <th scope="col">Gists No.</th>
+                    <th scope="col">Followers</th>
+                    <th scope="col">Following</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Repos Url</th>
+                </tr>
+            </thead>
+            <tbody>
+                <td>{{ result.public_repos }}</td>
+                <td>{{ result.public_gists }} </td>
+                <td>{{ result.followers }} </td>
+                <td>{{ result.following }} </td>
+                <td>{{ result.email }} </td>
+                <td><a href="{{ result.repos_url }}">{{ result.repos_url }}</a> </td>
+                
+            </tbody>
+        </table>
+    </mat-card-content>
+    <mat-divider></mat-divider>
+    <mat-card-actions align="end" height="30px">
+            <button mat-raised-button color="warn" class="btn" >ADD TO HISTORY</button>
+    </mat-card-actions>
+    </mat-card>
+</div>
+
+
+
