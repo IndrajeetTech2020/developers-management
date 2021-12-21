@@ -1,5 +1,4 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { RestApiService } from "src/app/rest-api.service";
 
 @Component({
   selector: 'app-header',
@@ -10,7 +9,7 @@ export class HeaderComponent implements OnInit {
 
   @Output() toggleSideBarForMe: EventEmitter<any> = new EventEmitter();
 
-  constructor(public restApiService : RestApiService) { }
+  constructor() { }
 
   ngOnInit() { }
 
@@ -24,7 +23,7 @@ export class HeaderComponent implements OnInit {
   }
 
   logout() {
-    this.restApiService.logout();
+    
   }
 
 
