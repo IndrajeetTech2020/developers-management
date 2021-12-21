@@ -13,44 +13,45 @@ import {Observable} from 'rxjs/Rx';
 })
 
 export class SearchComponent implements OnInit {
-  public result = {
-    "login": "",
-    "id": "",
-    "node_id": "=",
-    "avatar_url": "https://material.angular.io/assets/img/examples/shiba2.jpg",
-    "gravatar_id": "",
-    "url": "",
-    "html_url": "",
-    "followers_url": "",
-    "following_url": "",
-    "gists_url": "",
-    "starred_url": "",
-    "subscriptions_url": "",
-    "organizations_url": "",
-    "repos_url": "",
-    "events_url": "",
-    "received_events_url": "",
-    "type": "",
-    "site_admin": false,
-    "name": "Bukrs",
-    "company": null,
-    "blog": "",
-    "location": null,
-    "email": null,
-    "hireable": null,
-    "bio": "",
-    "twitter_username": null,
-    "public_repos": "",
-    "public_gists": "",
-    "followers": "",
-    "following": "",
-    "created_at": "",
-    "updated_at": ""
-  };
+  public data;
+  public result;
   constructor(private _searchService: SearchService) { }
 
   ngOnInit() {
-    
+    this.result = {
+      "login": "",
+      "id": "",
+      "node_id": "=",
+      "avatar_url": "https://material.angular.io/assets/img/examples/shiba2.jpg",
+      "gravatar_id": "",
+      "url": "",
+      "html_url": "",
+      "followers_url": "",
+      "following_url": "",
+      "gists_url": "",
+      "starred_url": "",
+      "subscriptions_url": "",
+      "organizations_url": "",
+      "repos_url": "",
+      "events_url": "",
+      "received_events_url": "",
+      "type": "",
+      "site_admin": false,
+      "name": "Bukrs",
+      "company": null,
+      "blog": "",
+      "location": null,
+      "email": null,
+      "hireable": null,
+      "bio": "",
+      "twitter_username": null,
+      "public_repos": "",
+      "public_gists": "",
+      "followers": "",
+      "following": "",
+      "created_at": "",
+      "updated_at": ""
+    };
   }
   searchProfile(idPrfName : string){
     console.log("Search clicked");
@@ -64,8 +65,6 @@ export class SearchComponent implements OnInit {
            err => console.error(err),
            () => console.log('done loading foods')
          );
-    console.log(this.result);
+    //this.result = this.data;
   }
-
-
 }
